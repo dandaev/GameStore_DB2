@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="758.0" stylesheets="@../../resources/css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.UsersPaneController">
+   <children>
+      <ScrollPane prefHeight="403.0" prefWidth="758.0">
+         <content>
+            <VBox prefHeight="398.0" prefWidth="741.0" spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="586.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#exportNutzersXmlHandle" styleClass="in-button" text="Export to XML">
+                           <HBox.margin>
+                              <Insets bottom="6.0" right="12.0" top="6.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="usersVBox" prefHeight="347.0" prefWidth="742.0" spacing="5.0" />
+               </children></VBox>
+         </content>
+      </ScrollPane>
+      <ButtonBar layoutY="405.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0" prefWidth="758.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#onNeuNutzerButtonHandle" prefHeight="26.0" prefWidth="161.0" styleClass="my-button" text="Neuen Nutzer Erstellen" />
+        </buttons>
+         <padding>
+            <Insets right="37.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+</AnchorPane>

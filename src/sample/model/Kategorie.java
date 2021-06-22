@@ -6,10 +6,7 @@ public class Kategorie {
 
     @Override
     public String toString() {
-        return "Kategorie{" +
-                "KatNr=" + KatNr +
-                ", KatName='" + KatName + '\'' +
-                '}';
+        return "("+KatNr+") " + KatName;
     }
 
     public Kategorie() {

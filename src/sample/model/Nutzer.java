@@ -5,7 +5,7 @@ public class Nutzer {
     private String NutzName;
     private String NutzLogin;
     private String NutzPasswort;
-    private Enum NutzRole;
+    private Role NutzRole;
 
     @Override
     public String toString() {
@@ -21,7 +21,7 @@ public class Nutzer {
     public Nutzer() {
     }
 
-    public Nutzer(Integer nutzNr, String nutzName, String nutzLogin, String nutzPasswort, Enum nutzRole) {
+    public Nutzer(Integer nutzNr, String nutzName, String nutzLogin, String nutzPasswort, Role nutzRole) {
         NutzNr = nutzNr;
         NutzName = nutzName;
         NutzLogin = nutzLogin;
@@ -61,11 +61,11 @@ public class Nutzer {
         NutzPasswort = nutzPasswort;
     }
 
-    public Enum getNutzRole() {
+    public Role getNutzRole() {
         return NutzRole;
     }
 
-    public void setNutzRole(Enum nutzRole) {
+    public void setNutzRole(Role nutzRole) {
         NutzRole = nutzRole;
     }
 }

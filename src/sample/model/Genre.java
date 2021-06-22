@@ -6,10 +6,7 @@ public class Genre {
 
     @Override
     public String toString() {
-        return "Genre{" +
-                "GeNr=" + GeNr +
-                ", GeName='" + GeName + '\'' +
-                '}';
+        return "("+GeNr+") " + GeName;
     }
 
     public Genre() {

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.MainPaneController">
+   <children>
+      <BorderPane fx:id="mainBorderPane" layoutX="-4.0" layoutY="-3.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="890.0" style="-fx-background-color: #eee;" stylesheets="@../../resources/css/style.css">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="890.0" spacing="8.0" style="-fx-background-color: #555;" stylesheets="@../../resources/css/style.css" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="8.0" left="368.0" right="8.0" top="8.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="46.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/icons/logo_game_store.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="20.0" prefWidth="147.0" text="Game Store" textFill="#fccab3" HBox.hgrow="NEVER">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <right>
+            <VBox fx:id="spielListe" alignment="TOP_CENTER" fillWidth="false" prefHeight="496.0" prefWidth="250.0" spacing="8.0" style="-fx-background-color: #eee;" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="8.0" right="12.0" top="8.0" />
+               </padding>
+               <children>
+                  <ListView fx:id="spielListView" opacity="0.87" prefHeight="482.0" prefWidth="324.0" style="-fx-background-radius: 0;">
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                  </ListView>
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="516.0" prefWidth="119.0" spacing="2.0" style="-fx-background-color: #e0dad1;" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <Hyperlink alignment="TOP_CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" onAction="#gotoStore" styleClass="navigation-hyperlink" stylesheets="@../../resources/css/style.css" text="Store" textAlignment="CENTER" textFill="#fccab3">
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons/ic_shopping_cart_white_48dp_2x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink alignment="TOP_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="33.0" maxWidth="1.7976931348623157E308" onAction="#gotoAccount" styleClass="navigation-hyperlink" stylesheets="@../../resources/css/style.css" text="Account" textAlignment="CENTER" textFill="#fccab3">
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons/ic_account_box_white_48dp_2x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="myGamesHyperLink" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" onAction="#gotoMygames" styleClass="navigation-hyperlink" stylesheets="@../../resources/css/style.css" text="My Games" textAlignment="CENTER" textFill="#fccab3">
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons/ic_video_library_white_48dp_2x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="usersHyperLink" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="192.0" maxWidth="1.7976931348623157E308" onAction="#gotoUsers" styleClass="navigation-hyperlink" stylesheets="@../../resources/css/style.css" text="Users" textAlignment="CENTER" textFill="#fccab3" visible="false">
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons/ic_persons.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <Button mnemonicParsing="false" onAction="#proccessLogout" prefWidth="125.0" styleClass="in-button" text="Logout">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="32.0" />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <ScrollPane fx:id="gamesScrollPane" prefHeight="474.0" prefWidth="521.0">
+            <VBox alignment="TOP_RIGHT" style="-fx-background-color: #eee;">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <children>
+                  <HBox maxWidth="-Infinity" prefHeight="52.0" prefWidth="492.0">
+                     <children>
+                        <Label fx:id="spielName" prefHeight="48.0" prefWidth="366.0" text="Label" textFill="#795518">
+                           <font>
+                              <Font size="21.0" />
+                           </font></Label>
+                        <Button fx:id="addToMygamesButton" mnemonicParsing="false" onAction="#kaufenButtonClicked" prefHeight="47.0" prefWidth="140.0" styleClass="my-button" text="Kaufen">
+                              <HBox.margin>
+                                 <Insets top="9.0" />
+                              </HBox.margin>
+                              <font>
+                                 <Font size="13.0" />
+                              </font></Button>
+                     </children>
+                        <VBox.margin>
+                           <Insets right="20.0" />
+                        </VBox.margin>
+                        <padding>
+                           <Insets left="14.0" />
+                        </padding>
+                  </HBox>
+                     <Separator prefHeight="12.0" prefWidth="512.0" />
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="187.0" prefWidth="492.0">
+                     <children>
+                        <ImageView fx:id="spielImage" fitHeight="173.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                        <VBox.margin>
+                           <Insets right="20.0" />
+                        </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="8.0" top="8.0" />
+                     </padding>
+                  </Separator>
+                  <HBox maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefWidth="492.0" spacing="8.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="123.0" text="Publikationsdatum" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="spielPublikationdatum" prefHeight="24.0" prefWidth="361.0" text="07/12/2020" />
+                     </children>
+                        <VBox.margin>
+                           <Insets right="20.0" />
+                        </VBox.margin>
+                  </HBox>
+                  <HBox maxWidth="-Infinity" prefHeight="19.0" prefWidth="492.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="130.0" text="Publisher" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="spielPublisher" prefHeight="24.0" prefWidth="342.0" text="Steam" />
+                     </children>
+                        <VBox.margin>
+                           <Insets right="20.0" />
+                        </VBox.margin></HBox>
+                  <HBox maxWidth="-Infinity" prefWidth="492.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="130.0" text="Kategorie" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="spielKategorie" prefHeight="24.0" prefWidth="342.0" text="12+" />
+                     </children>
+                        <VBox.margin>
+                           <Insets right="20.0" />
+                        </VBox.margin>
+                  </HBox>
+                  <HBox maxWidth="-Infinity" prefHeight="30.0" prefWidth="492.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="130.0" text="Preis" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="spielPreis" prefHeight="24.0" prefWidth="341.0" text="59.99$">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                     </children>
+                        <VBox.margin>
+                           <Insets right="20.0" />
+                        </VBox.margin>
+                  </HBox>
+                     <HBox maxWidth="-Infinity" prefHeight="41.0" prefWidth="492.0">
+                        <children>
+                           <Label prefHeight="18.0" prefWidth="133.0" text="Genres">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <FlowPane fx:id="spielGenresFlowPane" maxWidth="-Infinity" prefHeight="42.0" prefWidth="373.0" />
+                        </children>
+                        <VBox.margin>
+                           <Insets right="20.0" />
+                        </VBox.margin></HBox>
+                  <VBox maxWidth="-Infinity" prefWidth="492.0">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="467.0" text="Beschreibung">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets top="8.0" />
+                           </padding>
+                        </Label>
+                        <Separator prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="8.0" />
+                           </VBox.margin>
+                        </Separator>
+                        <Label fx:id="spielBeschreibung" alignment="TOP_LEFT" maxWidth="-Infinity" prefWidth="492.0" text="Beschreibung" textAlignment="JUSTIFY" wrapText="true" />
+                     </children>
+                        <VBox.margin>
+                           <Insets right="20.0" />
+                        </VBox.margin>
+                  </VBox>
+                     <Separator prefHeight="18.0" prefWidth="510.0" />
+                     <Label prefHeight="18.0" prefWidth="508.0" text="Kommentare">
+                        <font>
+                           <Font name="System Bold Italic" size="13.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets bottom="10.0" />
+                        </VBox.margin>
+                     </Label>
+                     <Separator prefHeight="3.0" prefWidth="510.0" />
+                     <VBox fx:id="kommentarVBox" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="51.0" prefWidth="470.0">
+                        <VBox.margin>
+                           <Insets right="20.0" />
+                        </VBox.margin></VBox>
+                     <Separator prefHeight="16.0" prefWidth="510.0" />
+                     <VBox alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="410.0" spacing="8.0">
+                        <children>
+                           <TextField fx:id="kommentarTextField" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="61.0" prefWidth="470.0" promptText="Kommentar schreiben">
+                              <VBox.margin>
+                                 <Insets right="20.0" />
+                              </VBox.margin>
+                           </TextField>
+                           <Button fx:id="kommentarButton" mnemonicParsing="false" onAction="#kommentarEingeben" prefHeight="25.0" prefWidth="94.0" styleClass="my-button" text="Eingeben">
+                              <VBox.margin>
+                                 <Insets right="20.0" />
+                              </VBox.margin>
+                           </Button>
+                        </children>
+                        <VBox.margin>
+                           <Insets bottom="20.0" top="10.0" />
+                        </VBox.margin>
+                     </VBox>
+               </children>
+            </VBox>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

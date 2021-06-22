@@ -7,6 +7,9 @@ public class Spiel {
     private String Publikationsdatum;
     private Integer PublisherNr;
     private Integer KategorieNr;
+    private Double SpPreis;
+    private String SpImage;
+    private String LinkZumDownload;
 
     @Override
     public String toString() {
@@ -23,13 +26,15 @@ public class Spiel {
     public Spiel() {
     }
 
-    public Spiel(Integer spNr, String spName, String beschreibung, String publikationsdatum, Integer publisherNr, Integer kategorieNr) {
+    public Spiel(Integer spNr, String spName, String beschreibung, String publikationsdatum, Integer publisherNr, Integer kategorieNr, Double spPreis, String spImage) {
         SpNr = spNr;
         SpName = spName;
         Beschreibung = beschreibung;
         Publikationsdatum = publikationsdatum;
         PublisherNr = publisherNr;
         KategorieNr = kategorieNr;
+        SpPreis = spPreis;
+        SpImage = spImage;
     }
 
     public Integer getSpNr() {
@@ -78,5 +83,29 @@ public class Spiel {
 
     public void setKategorieNr(Integer kategorieNr) {
         KategorieNr = kategorieNr;
+    }
+
+    public Double getSpPreis() {
+        return SpPreis;
+    }
+
+    public void setSpPreis(Double spPreis) {
+        SpPreis = spPreis;
+    }
+
+    public String getSpImage() {
+        return SpImage;
+    }
+
+    public void setSpImage(String spImage) {
+        SpImage = spImage;
+    }
+
+    public String getLinkZumDownload() {
+        return LinkZumDownload;
+    }
+
+    public void setLinkZumDownload(String linkZumDownload) {
+        LinkZumDownload = linkZumDownload;
     }
 }

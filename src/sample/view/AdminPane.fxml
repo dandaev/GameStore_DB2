@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="475.0" prefWidth="774.0" stylesheets="@../../resources/css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.AdminPaneController">
+   <children>
+      <BorderPane layoutX="-2.0" layoutY="-2.0" prefHeight="475.0" prefWidth="774.0">
+         <bottom>
+            <ButtonBar maxWidth="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="80.0" prefWidth="552.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#handleGenreErstellen" styleClass="my-button" text="Genre erstellen" />
+                  <Button mnemonicParsing="false" onAction="#handleKategorieErstellen" styleClass="my-button" text="Kategorie erstellen" />
+                  <Button mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#handlePublisherErstellen" styleClass="my-button" text="Publisher erstellen" textOverrun="WORD_ELLIPSIS" />
+                  <Button mnemonicParsing="false" onAction="#handleSpielErstellen" styleClass="my-button" text="Spiel erstellen" />
+              </buttons>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ButtonBar>
+         </bottom>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Spiels">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane layoutY="1.0" prefHeight="368.0" prefWidth="774.0">
+                                 <content>
+                                    <VBox prefHeight="329.0" prefWidth="760.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="760.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#exportSpielsXmlHandle" styleClass="in-button" text="Export to XML">
+                                                   <HBox.margin>
+                                                      <Insets bottom="6.0" right="12.0" top="6.0" />
+                                                   </HBox.margin></Button>
+                                             </children>
+                                          </HBox>
+                                          <VBox fx:id="spielsVBox" prefHeight="314.0" prefWidth="760.0" />
+                                       </children></VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Publishers">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane layoutY="1.0" prefHeight="368.0" prefWidth="774.0">
+                                 <content>
+                                    <VBox prefHeight="361.0" prefWidth="760.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="760.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#exportPublishersXmlHandle" styleClass="in-button" text="Export to XML">
+                                                   <HBox.margin>
+                                                      <Insets bottom="6.0" right="12.0" top="6.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <VBox fx:id="publisherVBox" prefHeight="327.0" prefWidth="760.0" />
+                                       </children></VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Kategories">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane layoutY="1.0" prefHeight="368.0" prefWidth="774.0">
+                                 <content>
+                                    <VBox prefHeight="361.0" prefWidth="760.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="760.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#exportKategoriesXmlHandle" styleClass="in-button" text="Export to XML">
+                                                   <HBox.margin>
+                                                      <Insets bottom="6.0" right="12.0" top="6.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <VBox fx:id="kategorieVBOX" prefHeight="200.0" prefWidth="100.0" />
+                                       </children></VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Genres">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane layoutY="1.0" prefHeight="368.0" prefWidth="774.0">
+                                 <content>
+                                    <VBox prefHeight="361.0" prefWidth="760.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="760.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#exportGenresXmlHandle" styleClass="in-button" text="Export to XML">
+                                                   <HBox.margin>
+                                                      <Insets bottom="6.0" right="12.0" top="6.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <VBox fx:id="genresVBox" prefHeight="258.0" prefWidth="760.0" />
+                                       </children></VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

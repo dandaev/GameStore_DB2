@@ -1,0 +1,88 @@
+/* Navigation links */
+.navigation-hyperlink {
+    -fx-text-fill: #111111;
+    -fx-border-color: #494545;
+    -fx-border-width: 1 0 0 0;
+}
+
+/*.navigation-hyperlink:visited {*/
+/*    -fx-text-fill: #686565;*/
+/*    -fx-border-style: none;*/
+/*    -fx-underline: false;*/
+/*}*/
+
+.navigation-hyperlink:hover {
+    -fx-underline: false;
+    -fx-text-fill: #28285a;
+    -fx-background-color: #fccab3;
+}
+
+.navigation-hyperlink:focused {
+    -fx-underline: false;
+    -fx-background-color: #3963ad;
+}
+
+/* Button rules */
+.my-button {
+    -fx-text-fill: white;
+    -fx-background-color: #3963ad;
+    -fx-background-radius: 1em;
+    -fx-pref-height: 30;
+}
+
+.in-button{
+    -fx-text-fill: white;
+    -fx-background-color: #3963ad;
+}
+.in-button-red{
+    -fx-text-fill: white;
+    -fx-background-color: #ad495d;
+}
+
+.my-button-red {
+    -fx-text-fill: white;
+    -fx-background-color: #ad495d;
+    -fx-background-radius: 1em;
+    -fx-pref-width: 120;
+    -fx-pref-height: 30;
+}
+
+.my-button:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #FF914D;
+}
+
+.in-button:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #FF914D;
+}
+
+.in-button-red:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #2F4858;
+}
+
+.my-button-red:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #2F4858;
+}
+
+/* Library tiles */
+.library-tiles {
+    -fx-underline: false;
+    -fx-text-fill: #795518;
+    -fx-padding: 8;
+}
+
+.library-tiles:hover {
+    -fx-underline: false;
+    -fx-text-fill: white;
+    -fx-background-color: #3963ad;
+}
+
+.games-card {
+    -fx-border-color: #283863;
+    -fx-border-insets: 5;
+    -fx-border-width: 1;
+    -fx-padding: 3;
+}

@@ -6,10 +6,7 @@ public class Publisher {
 
     @Override
     public String toString() {
-        return "Publisher{" +
-                "PubNr=" + PubNr +
-                ", PublisherName='" + PublisherName + '\'' +
-                '}';
+        return  "("+PubNr+") " + PublisherName;
     }
 
     public Publisher() {
