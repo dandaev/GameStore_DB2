@@ -2,10 +2,14 @@ package sample.view.dialog.game;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import sample.model.*;
 import sample.repository.Datenbank;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.nio.file.Files;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Objects;
@@ -73,6 +77,19 @@ public class GameCreateDialogController {
     @FXML
     private void handleCancelButton() {
         stage.close();
+    }
+
+    @FXML
+    private void handleChooseImage(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(new File("D:/DE-Study/Sommersemester(2021)/DB2/Project/GameStore_DB2/src/resources/images/games"));
+        File image = fileChooser.showOpenDialog(null);
+
+        if (image != null){
+            imageTextField.setText(image.getName());
+        }else {
+            alert("Image wird nicht hochgeladen");
+        }
     }
 
     private void alert(String text) {

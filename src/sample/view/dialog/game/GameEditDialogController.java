@@ -11,12 +11,14 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.Main;
 import sample.model.*;
 import sample.repository.Datenbank;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.sql.SQLException;
@@ -100,6 +102,19 @@ public class GameEditDialogController {
     @FXML
     private void handleCancelButton() {
         stage.close();
+    }
+
+    @FXML
+    private void handleChooseImage(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(new File("D:/DE-Study/Sommersemester(2021)/DB2/Project/GameStore_DB2/src/resources/images/games"));
+        File image = fileChooser.showOpenDialog(null);
+
+        if (image != null){
+            imageTextField.setText(image.getName());
+        }else {
+            alert("Image wird nicht hochgeladen");
+        }
     }
 
     private void alert(String text) {
