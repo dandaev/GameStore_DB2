@@ -5,6 +5,7 @@ INSERT INTO [Kategorie] ([KatName]) VALUES ('6+') Go
 INSERT INTO [Kategorie] ([KatName]) VALUES ('12+') Go
 INSERT INTO [Kategorie] ([KatName]) VALUES ('16+') Go
 INSERT INTO [Kategorie] ([KatName]) VALUES ('18+') Go
+INSERT INTO [Kategorie] ([KatName]) VALUES ('No Kategorie') Go
 
 INSERT INTO [Spiel] ( [SpName], [Beschriebung], [Publikationsdatum], [PublisherNr], [KategorieNr], [SpPreis], [SpImage]) VALUES ('Dying Light 2 Stay Human', 'Vor mehr als zwanzig Jahren haben wir in Harran gegen das Virus gekämpft … und verloren. Jetzt verlieren wir wieder. Die Stadt wird von Konflikten zerfressen. Die Zivilisation wurde ins Mittelalter zurückversetzt. Und dennoch gibt es Hoffnung.
 Sie sind ein Wanderer mit der Macht, die Stadt zu verändern. Aber Ihre Fähigkeiten haben einen Preis. Sie werden von Erinnerungen geplagt und haben sich aufgemacht, um die Wahrheit zu finden ... nur um mitten in ein Kriegsgebiet zu geraten. Arbeiten Sie an Ihren Fähigkeiten, denn um ihre Feinde zu besiegen und neue Verbündete zu gewinnen, werden Sie sowohl Ihre Fäuste als auch Ihren Verstand brauchen. Lüften Sie die dunklen Geheimnisse Ihrer Macht, wählen Sie eine Seite und bestimmen Sie über Ihr Schicksal. 
